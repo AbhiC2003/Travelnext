@@ -1,0 +1,62 @@
+<% layout('layouts/boilerplate') %>
+<body>
+   
+    <div class="row">
+        <di class="col-8 offset-2">
+            <br><br>
+             <h3>Create New Listing</h3>
+    <form method="post" action="/listings" novalidate  class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-2">
+            <label for="title" class="form-label">Enter title</label>
+            <input name="listing[title]" placeholder="Enter title" type="text" class="form-control"   required><br>
+            <div class="valid-feedback">
+               Title Looks good!
+            </div>
+            
+        </div>
+        
+        <div class="mb-2">
+            <label for="description" class="form-label">Enter description</label>
+            <textarea name="listing[description]" placeholder="Enter description" class="form-control" required></textarea><br>
+            <div class="invalid-feedback">
+               description should be valid 
+            </div>
+        </div>
+        <div class="mb-2">
+            <label for="image" class="form-label"> Upload image</label>
+            <input name="listing[image]"  type="file" class="form-control"><br>
+        </div>
+
+        <div class="mb-2">
+            <label for="price" class="form-label"> price</label>
+            <input name="listing[price]" placeholder="Enter price" type="number" class="form-control" required><br>
+            <div class="invalid-feedback">
+                price should be valid 
+             </div>
+        </div>
+
+        <div class="mb-2">
+            <label for="location" class="form-label"> location</label>
+            <input name="listing[location]" placeholder="Enter location" type="text" class="form-control" required><br>
+            <div class="invalid-feedback">
+                location should be valid 
+             </div>
+        </div>
+
+        <div class="mb-2">
+            <label for="country" class="form-label">country</label>
+            <input name="listing[country]" placeholder="Enter country" type="text" class="form-control" required><br><br>
+            <div class="invalid-feedback">
+                country should be valid 
+             </div>
+        </div>
+
+        <div style="display: flex; justify-content: center;">
+            <button class="btn btn-dark  add-btn">Add</button>
+        </div>
+        <br><br>
+    </form>
+</div>
+</div>
+</body>
+

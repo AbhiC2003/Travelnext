@@ -24,11 +24,15 @@
 
     <% if (currUser && currUser._id.equals(listing.owner._id)) { %>
         <div class="text-center mt-3 mb-3">
-            <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark mb-2 mb-md-0 col-12 col-md-3 edit-btn">Edit</a>
-            <form method="POST" action="/listings/<%= listing._id %>?_method=DELETE" class="d-inline-block">
-                <button class="btn btn-dark ms-md-4 col-12 col-md-3 mt-2 mt-md-0">Delete</button>
-            </form>
+            <div class="d-flex justify-content-center">
+                <a href="/listings/<%= listing._id %>/edit" class="btn btn-danger me-2 flex-grow-1" style="max-width: 150px;">Edit</a>
+                <form method="POST" action="/listings/<%= listing._id %>?_method=DELETE">
+                    <button class="btn btn-dark flex-grow-1" style="max-width: 150px;">Delete</button>
+                </form>
+            </div>
         </div>
+        
+        
     <% } %>
 
     <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3 mb-3">
